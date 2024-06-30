@@ -1,45 +1,30 @@
 Kafka-php
 ==========
 
-[中文文档](README_CH.md)
+[![tests](https://github.com/g41797/kafka-php/actions/workflows/tests.yml/badge.svg)](https://github.com/g41797/kafka-php/actions/workflows/tests.yml)
 
-[![QQ Group](https://img.shields.io/badge/QQ%20Group-657517955-brightgreen.svg)]()
-[![Build Status](https://travis-ci.org/weiboad/kafka-php.svg?branch=master)](https://travis-ci.org/weiboad/kafka-php)
-[![Packagist](https://img.shields.io/packagist/dm/nmred/kafka-php.svg?style=plastic)]()
-[![Packagist](https://img.shields.io/packagist/dd/nmred/kafka-php.svg?style=plastic)]()
-[![Packagist](https://img.shields.io/packagist/dt/nmred/kafka-php.svg?style=plastic)]()
-[![GitHub issues](https://img.shields.io/github/issues/weiboad/kafka-php.svg?style=plastic)](https://github.com/weiboad/kafka-php/issues)
-[![GitHub forks](https://img.shields.io/github/forks/weiboad/kafka-php.svg?style=plastic)](https://github.com/weiboad/kafka-php/network)
-[![GitHub stars](https://img.shields.io/github/stars/weiboad/kafka-php.svg?style=plastic)](https://github.com/weiboad/kafka-php/stargazers)
-[![GitHub license](https://img.shields.io/badge/license-Apache%202-blue.svg?style=plastic)](https://raw.githubusercontent.com/weiboad/kafka-php/master/LICENSE)
+Forked from [kafka-php](https://github.com/weiboad/kafka-php).
 
-Kafka-php is a pure PHP kafka client that currently supports greater than 0.8.x version of Kafka, this project v0.2.x and v0.1.x are incompatible if using the original v0.1.x You can refer to the document 
+ Reason of fork
+ - non-compatible libraries
+ - old PHP version(7.1)
+
+  Kafka-php is a pure PHP kafka client that currently supports greater than 0.8.x version of Kafka, this project v0.2.x and v0.1.x are incompatible if using the original v0.1.x You can refer to the document 
 [Kafka PHP v0.1.x Document](https://github.com/weiboad/kafka-php/blob/v0.1.6/README.md), but it is recommended to switch to v0.2.x . v0.2.x use PHP asynchronous implementation and kafka broker interaction, more stable than v0.1.x efficient, because the use of PHP language so do not compile any expansion can be used to reduce the access and maintenance costs
 
 
 ## Requirements
 
-* Minimum PHP version: 7.1
+* Minimum PHP version: 8.0
 * Kafka version greater than 0.8
 * The consumer module needs kafka broker version  greater than 0.9.0
 
 ## Installation
 
-Add the lib directory to the PHP include_path and use an autoloader like the one in the examples directory (the code follows the PEAR/Zend one-class-per-file convention).
+The package could be installed with composer:
 
-## Composer Install
-
-Simply add a dependency `nmred/kafka-php` to your project if you use Composer to manage the dependencies of your project.
- 
-`$ composer require nmred/kafka-php`
-
- Here is a minimal example of a composer.json file :
-```
-{
-	"require": {
-		"nmred/kafka-php": "0.2.*"
-	}
-}
+```shell
+composer require g41797/kafka-php
 ```
 
 ## Configuration
@@ -154,9 +139,3 @@ $consumer->start(function($topic, $part, $message) {
 
 Refer [Example](https://github.com/weiboad/kafka-php/tree/master/example)
 
-
-## QQ Group
-
-Group 1: 531522091 
-Group 2: 657517955
-![QQ Group](docs/qq_group.png)
