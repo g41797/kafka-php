@@ -7,7 +7,7 @@
         "Kafka"
     ],
     "homepage": "http://www.swanlinux.net",
-    "license": "Apache License Version 2.0",
+    "license": "Apache-2.0",
     "require": {
         "php": ">=8.0",
         "amphp/amp": "^2.0.3",
